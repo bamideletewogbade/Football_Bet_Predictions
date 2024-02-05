@@ -1,4 +1,6 @@
-class Slip(db.Model):
+from db import db
+
+class Prediction(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     league = db.Column(db.String(100), nullable=False)
     teams = db.Column(db.String(100), nullable=False)
@@ -7,5 +9,3 @@ class Slip(db.Model):
     bet_platform = db.Column(db.String(100), nullable=False)
     result = db.Column(db.String(100), nullable=False)
     code = db.Column(db.String(100), nullable=False)
-
-   

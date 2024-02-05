@@ -253,38 +253,33 @@
         </nav>
 
         <div class="main-body">
-            <h2 style="color: white;">Add Slip</h2>
+            <h2>Add Slip</h2>
             <div class="promo_card">
                 <form action="/add" method="post">
                     <label for="league">League:</label>
-                    <input type="text" id="league" name="league" required placeholder="Premier League">
-    
+                    <input type="text" id="league" name="league" required placeholder="Premier League" class="form-input">
+                    
                     <label for="teams">Teams:</label>
-                    <input type="text" id="teams" name="teams" required placeholder="Man City vs Real Madrid">
-    
+                    <input type="text" id="teams" name="teams" required placeholder="Man City vs Real Madrid" class="form-input">
+                    
                     <label for="tips">Tips:</label>
-                    <input type="text" id="tips" name="tips" required placeholder="Madrid to win">
-    
+                    <input type="text" id="tips" name="tips" required placeholder="Madrid to win" class="form-input">
+                    
                     <label for="result">Result:</label>
-                    <input type="text" id="result" name="result" required placeholder="Win">
-                    <!-- <label for="result">Result (✅):</label> -->
-                    <!-- <input type="checkbox" id="result" name="result" value="Result (✅)" class="text-white"> -->
-    
+                    <input type="text" id="result" name="result" required placeholder="Win" class="form-input">
+                    
                     <label for="posted_by">Posted By:</label>
-                    <input type="text" id="posted_by" name="posted_by" required placeholder="Red Ninja">
-
+                    <input type="text" id="posted_by" name="posted_by" required placeholder="Red Ninja" class="form-input">
+        
                     <label for="bet_platform">Bet Platform:</label>
-                    <input type="text" id="bet_platform" name="bet_platform" required placeholder="Sporty Bet">
-    
-                    <button type="submit">Add Slip</button>
+                    <input type="text" id="bet_platform" name="bet_platform" required placeholder="Sporty Bet" class="form-input">
+
+                    <label for="slip_code">Slip Code:</label>
+                    <input type="text" id="slip_code" name="slip_code" required placeholder="ABC123">
+                    
+                    <button type="submit" class="submit-button">Add Slip</button>
                 </form>
-                <!-- <div class="image-container">
-                    <img src="{{ url_for('static', filename='your_image.jpg') }}" alt="Image">
-                </div> -->
             </div>
-             <!-- <div class="image-container">
-        <img src="{{ url_for('static', filename='1.jpg') }}" alt="Image">
-    </div> -->
         </div>
         <!-- Add your sidebar and other elements here if needed -->
 
