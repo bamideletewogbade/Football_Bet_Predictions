@@ -21,7 +21,10 @@
         }
 
         body {
-            background: rgb(219, 219, 219);
+            background-image:url('/static/images/16.jpeg');
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat; 
             font-family: 'Verdana', 'Geneva', sans-serif;
         }
 
@@ -43,7 +46,7 @@
             color: #000;
             font-size: 18px;
             font-weight: 600;
-            margin-right: 2rem; /* Adjusted margin */
+            margin-right: 2rem; 
         }
 
         .search_box {
@@ -98,18 +101,19 @@
             justify-content: space-between;
         }
 
+        
         .main-body {
-            width: 85%;
+            width: 95%;
             padding: 1rem;
         }
 
         .promo_card {
-            width: 80%;
+            width: 35%;
             color: #fff;
             margin-top: 10px;
             border-radius: 8px;
             padding: 1rem;
-            background: rgb(37, 37, 37);
+            background: rgb(89, 184, 100);
         }
 
         .promo_card h1,
@@ -125,13 +129,20 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            background-color: #000;
+            background-color: rgb(9, 99, 24);
             color: #fff;
             font-size: 16px;
             font-weight: 600;
+            transition: background-color 0.3s ease;
         }
+
+        .promo_card button:hover {
+            background-color: rgb(23, 112, 38); 
+            color: rgb(242, 240, 248);
+        }
+
         .promo_card form {
-            max-width: 400px; 
+            max-width: 70%; 
             margin: 20px;
             display: flex;
             flex-direction: column;
@@ -144,12 +155,11 @@
         }
 
         .promo_card input {
-            width: 120%;
+            width: 50%;
             padding: 8px;
             margin-bottom: 15px;
             box-sizing: border-box;
         }
-
 
         /* Add any additional styles as needed */
         /* Side menubar section */
@@ -239,11 +249,11 @@
         <nav>
             <div class="side_navbar">
                 <span>Main Menu</span>
-                <a href="/admin">Dashboard</a>
-                <a href="/add">Add new slip</a>
-                <a href="/edit" class="active">Edit a slip</a>
-                <a href="/delete">Delete a slip</a>
-                <a href="/manage">Manage Users</a>
+                <a href="/admin" class="active">Dashboard</a>
+                <a href="/add_slip">Add new slip</a>
+                <a href="/edit_slip">Edit a slip</a>
+                <a href="/delete_slip">Delete a slip</a>
+                <a href="/manage_user">Manage Users</a>
 
                 <div class="links">
                     <span>Connect</span>
@@ -257,7 +267,7 @@
         <div class="main-body">
             <h2>Edit Slip</h2>
             <div class="promo_card">
-                <form action="/edit" method="post">
+                <form action="/edit_slip" method="post">
                     <label for="league">League:</label>
                     <input type="text" id="league" name="league" required placeholder="Spanish La Liga">
     
@@ -268,7 +278,7 @@
                     <input type="text" id="tips" name="tips" required placeholder="Madrid to win">
     
                     <label for="result">Result:</label>
-                    <input type="text" id="result" name="result" required>
+                    <input type="text" id="result" name="result" required placeholder="Win">
     
                     <label for="postedBy">Posted By:</label>
                     <input type="text" id="postedBy" name="postedBy" required placeholder="White Ninja">
